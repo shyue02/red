@@ -33,7 +33,7 @@ public class BoardsController {
 	
 	@GetMapping("/boards/{id}")
 	public RespDto<?> getOne(@PathVariable Integer id){
-		return new RespDto<>(1, "글조회성공", boardsDao.findById(id));
+		return new RespDto<>(1, "글조회성공", boardsDao.findByIdtoDetail(id));
 	}
 	
 	@DeleteMapping("/boards/{id}")
